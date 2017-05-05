@@ -263,7 +263,6 @@ var system = {
         var date = new Date();
         var ms = moment(date).format('YYYYMMDDHHmmss').toString();
         var dataPath = settings.DATABACKFORDER + ms;
-//        var cmdstr = 'mongodump -o "'+dataPath+'"';
         var cmdstr = settings.MONGODBEVNPATH + 'mongodump -u '+settings.USERNAME+' -p '+settings.PASSWORD+' -d '+settings.DB+' -o "'+dataPath+'"';
 
         var batPath = settings.DATAOPERATION + '/backupData.sh';

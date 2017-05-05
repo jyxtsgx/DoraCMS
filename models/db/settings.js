@@ -8,38 +8,38 @@ module.exports = {
 
     // debug 为 true 时，用于本地调试
     debug: false,
-    imgZip : true, // 上传图片是否压缩(如果为false则本地不需要安装gm)
-    session_secret: 'doracms_secret', // 务必修改
-    auth_cookie_name: 'doracms',
+    imgZip : false, // 上传图片是否压缩(如果为false则本地不需要安装gm)
+    session_secret: 'zhufengpeixun', // 务必修改
+    auth_cookie_name: 'interview',
     encrypt_key : 'dora',
 //    数据库配置
-    URL: 'mongodb://127.0.0.1:27017/doracms',
-    DB: 'doracms',
-    HOST: '',
+    URL: 'mongodb://127.0.0.1:27017/interview',
+    DB: 'interview',
+    HOST: '127.0.0.1',
     PORT: 27017,
-    USERNAME: '',
-    PASSWORD: '',
+    USERNAME: process.env.USERNAME,
+    PASSWORD: process.env.PASSWORD,
 
 
 //    站点基础信息配置
-    SITETITLE : '前端开发俱乐部', // 站点名称
-    SITEDOMAIN : 'http://www.html-js.cn', // 站点域名
-    SITEICP : '粤ICP备15038960号-2', // 站点备案号
+    SITETITLE : '珠峰面试题库', // 站点名称
+    SITEDOMAIN : 'http://mianshi.zhufengpeixun.cn', // 站点域名
+    SITEICP : '京公网安备110108400531号', // 站点备案号
     SITEVERSION : 'v1.1.0', // 静态资源版本戳
-    SYSTEMMAIL : 'doramart@qq.com', // 管理员个人邮箱
+    SYSTEMMAIL : '83687401@qq.com', // 管理员个人邮箱
     UPDATEFOLDER : process.cwd()+'/public/upload', // 默认上传文件夹本地路径
     TEMPSTATICFOLDER : process.cwd()+'/public/themes/', // 模板静态文件路径
     DATAOPERATION : process.cwd()+'/models/db/bat', //数据库操作脚本目录
-    DATABACKFORDER : 'C:/softbak/mongodbConfig/mongodata/', // 服务端数据备份目录
-    MONGODBEVNPATH : '/usr/local/mongodb/bin', // LINUXmongodb环境变量(win server下不用管)
+    DATABACKFORDER : process.env.DATABACKFORDER, // 服务端数据备份目录
+    MONGODBEVNPATH : process.env.MONGODBEVNPATH, // LINUXmongodb环境变量(win server下不用管)
     SYSTEMTEMPFORDER : process.cwd()+'/views/web/temp/', // 系统模板安装目录
-    DORACMSAPI : 'http://api.html-js.cn', // 系统服务提供商
-    CMSDISCRIPTION : '前端开发俱乐部,分享前端知识,丰富前端技能。汇集国内专业的前端开发文档,为推动业内前端开发水平共同奋斗。html,js,css,nodejs,前端开发,jquery,web前端, web前端开发, 前端开发工程师',
-    SITEKEYWORDS : '前端开发俱乐部,前端俱乐部,DoraCMS,Nodejs内容管理系统, 前端开发, web前端, 前端开发工程师,前端资源, angularjs, 前端开发工具, nodejs ,boostrap',
-    SITEBASICKEYWORDS : '前端开发俱乐部,前端开发,前端俱乐部,DoraCMS', // 基础关键词
+    DORACMSAPI : 'http://mianshi.zhufengpeixun.cn', // 系统服务提供商
+    CMSDISCRIPTION : '前端面试题',
+    SITEKEYWORDS : '前端，面试题',
+    SITEBASICKEYWORDS : '前端，面试题', // 基础关键词
 
 
-    SYSTEMMANAGE : new Array('sysTemManage','DoraCMS后台管理'),  // 后台模块(系统管理)
+    SYSTEMMANAGE : new Array('sysTemManage','珠峰面试题库后台管理'),  // 后台模块(系统管理)
     ADMINUSERLIST : new Array('sysTemManage_user','系统用户管理'),
     ADMINGROUPLIST : new Array('sysTemManage_uGroup','系统用户组管理'),
     ADSLIST : new Array('sysTemManage_ads','广告管理'),
@@ -73,8 +73,8 @@ module.exports = {
     redis_db: 0,
 
 //    邮件相关设置
-    site_email : 'xx@163.com',
-    site_email_psd : 'xxx',
+    site_email : '83687401@qq.com',
+    site_email_psd : process.env.SITE_EMAIL_PSD,
     email_findPsd : 'findPsd',
     email_reg_active : 'reg_active',
     email_notice_contentMsg : 'notice_contentMsg',

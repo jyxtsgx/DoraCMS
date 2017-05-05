@@ -16,8 +16,8 @@ var ContentTemplate = require("../models/ContentTemplate");
 
 //站点配置
 var settings = require("../models/db/settings");
-var db = mongoose.connect(settings.URL);
-//mongoose.connect('mongodb://'+settings.USERNAME+':'+settings.PASSWORD+'@'+settings.HOST+':'+settings.PORT+'/'+settings.DB+'');
+//var db = mongoose.connect(settings.URL);
+mongoose.connect('mongodb://'+settings.USERNAME+':'+settings.PASSWORD+'@'+settings.HOST+':'+settings.PORT+'/'+settings.DB+'');
 
 //信息删除操作
 
